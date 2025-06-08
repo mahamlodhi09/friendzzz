@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Best Friends Day</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #ffe3ec, #cce4f6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        color: #3b0a47;
+        overflow: hidden;
+        padding: 2rem;
+      }
+
+      h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        animation: bounce 1s ease-in-out infinite alternate;
+      }
+
+      p {
+        font-size: 1.3rem;
+        max-width: 600px;
+        margin-bottom: 2rem;
+        background: #ffffffaa;
+        padding: 1rem 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .next-btn {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 30px;
+        background: linear-gradient(to right, #ff69b4, #ff85c1);
+        color: white;
+        cursor: pointer;
+        box-shadow: 0 8px 15px rgba(255, 105, 180, 0.3);
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      .next-btn:hover {
+        transform: scale(1.05) rotate(-1deg);
+        box-shadow: 0 10px 20px rgba(255, 105, 180, 0.5);
+      }
+
+      @keyframes bounce {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .floating-hearts {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        background-image: url("https://png.pngtree.com/png-clipart/20211018/ourlarge/pngtree-falling-hearts-png-image_3988666.png");
+        background-repeat: repeat;
+        background-size: contain;
+        opacity: 0.2;
+        animation: float 60s linear infinite;
+      }
+
+      @keyframes float {
+        0% {
+          background-position: 0 100%;
+        }
+        100% {
+          background-position: 0 -100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="floating-hearts"></div>
+    <h1>I’m still mad</h1>
+    <p>
+      Buttt Happy Best Friends Day! 🎉 <br />Click below *if* you still care 😒
+    </p>
+    <a class="next-btn" href="choice.html">Go Next If We’re Still Friends </a>
+  </body>
+</html>

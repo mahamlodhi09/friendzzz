@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>A Letter For You 💌</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background: linear-gradient(135deg, #d0f0ff, #f5fcff);
+        font-family: "Poppins", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #034165;
+        overflow: hidden;
+        position: relative;
+      }
+
+      h1 {
+        font-family: "Poppins", sans-serif;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: #006bb3;
+        animation: fadeSlideIn 1s ease-out;
+      }
+
+      .hint {
+        font-size: 1rem;
+        font-style: italic;
+        color: #6faedc;
+        margin-bottom: 2rem;
+        animation: fadeSlideIn 1.2s ease-out;
+      }
+
+      .letter {
+        width: 200px;
+        height: 150px;
+        background: url("https://cdn-icons-png.flaticon.com/512/561/561127.png")
+          no-repeat center;
+        background-size: contain;
+        cursor: pointer;
+        animation: bounce 2s infinite ease-in-out;
+        transition: transform 0.3s ease;
+      }
+
+      .letter:hover {
+        transform: scale(1.1);
+      }
+
+      .message {
+        margin-top: 2rem;
+        max-width: 650px;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        box-shadow: 0 8px 24px rgba(0, 102, 204, 0.2);
+        color: #044a70;
+        font-size: 1.15rem;
+        display: none;
+        animation: zoomFade 0.8s ease forwards;
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      @keyframes zoomFade {
+        0% {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes fadeSlideIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .confetti {
+        position: absolute;
+        inset: 0;
+        background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQufR2_TH_0yNcWftJut39Pncc7KtYv63u58w&s");
+        background-size: cover;
+        opacity: 0.15;
+        pointer-events: none;
+        z-index: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="confetti"></div>
+
+    <h1>OHHHHHH NOOOOOO</h1>
+    <p>A LETERRRRRR ??????</p>
+    <div class="hint">Click the letter to open something beautiful</div>
+
+    <div class="letter" onclick="showMessage()"></div>
+
+    <div id="message" class="message">
+      <br /><br />
+      Happy best friends day, i know it was yesturday but i was too busy :(
+      <br /><br />
+      You Stupid ass, now go awayyy
+    </div>
+
+    <script>
+      function showMessage() {
+        const message = document.getElementById("message");
+        message.style.display = "block";
+      }
+    </script>
+  </body>
+</html>

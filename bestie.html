@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bestie 4L 🫶</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        font-family: "Poppins", sans-serif;
+        background-color: #cceeff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        animation: float 2s ease-in-out infinite alternate;
+      }
+
+      p {
+        font-size: 1.3rem;
+        max-width: 600px;
+        background: rgba(255, 255, 255, 0.6);
+        padding: 1rem 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .hug-img,
+      .wrong-img,
+      .real-img {
+        margin-top: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .hug-img,
+      .wrong-img {
+        max-width: 300px;
+      }
+
+      .real-img {
+        display: none;
+        max-width: 600px;
+        height: auto;
+        animation: zoomIn 0.7s ease-out forwards;
+      }
+
+      .wrong-section {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+      }
+
+      .btn {
+        margin-top: 1.5rem;
+        padding: 0.9rem 1.8rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 30px;
+        background-image: src(
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQufR2_TH_0yNcWftJut39Pncc7KtYv63u58w&s"
+        );
+        background-color: #4da4ff;
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .btn:hover {
+        transform: scale(1.05);
+        background-color: #3187e5;
+      }
+
+      .message {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        color: #e91e63;
+        font-weight: bold;
+      }
+
+      @keyframes zoomIn {
+        0% {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-10px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>YAYYYYYYY</h1>
+    <p>okay fine...</p>
+
+    <img
+      class="hug-img"
+      src="https://media.tenor.com/vYwW6rnQnhMAAAAC/bear-hug-love.gif"
+      alt="hug time"
+    />
+
+    <button class="btn" id="revealBtn">
+      Click to Reveal my STUPIDASS friend
+    </button>
+
+    <div class="wrong-section" id="wrongSection">
+      <img
+        class="wrong-img"
+        src="c:\Users\moazz\Downloads\WhatsApp Image 2025-06-09 at 1.13.35 AM.jpeg"
+        alt="Wrong pic"
+      />
+      <div class="message" id="wrongMessage">
+        OH NOOOOO 😱 That’s the wrong pic!!!
+      </div>
+      <button class="btn" id="realRevealBtn">
+        Click again to see my FAVVVV
+      </button>
+    </div>
+
+    <img
+      class="real-img"
+      id="realImg"
+      src="c:\Users\moazz\Downloads\WhatsApp Image 2025-06-09 at 1.12.56 AM (1).jpeg"
+      alt="Real Bestie"
+    />
+    <!-- Surprise Button -->
+    <a
+      href="surprise.html"
+      id="surpriseBtn"
+      class="btn"
+      style="display: none; margin-top: 2rem"
+    >
+      Click here to get a surprise 🎁
+    </a>
+
+    <script>
+      const revealBtn = document.getElementById("revealBtn");
+      const wrongSection = document.getElementById("wrongSection");
+      const realRevealBtn = document.getElementById("realRevealBtn");
+      const realImg = document.getElementById("realImg");
+
+      revealBtn.addEventListener("click", () => {
+        revealBtn.style.display = "none";
+        wrongSection.style.display = "flex";
+      });
+
+      realRevealBtn.addEventListener("click", () => {
+        realImg.style.display = "block";
+        realRevealBtn.style.display = "none";
+        document.getElementById("wrongMessage").textContent =
+          "Okay phew 😮‍💨 THIS is the right one 💖";
+        document.getElementById("surpriseBtn").style.display = "inline-block";
+      });
+    </script>
+  </body>
+</html>
