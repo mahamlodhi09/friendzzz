@@ -1,3 +1,55 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom, #fff0f5, #d6f0ff);
+  text-align: center;
+  padding: 5rem 1rem;
+  color: #2c003e;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#angryBtn {
+  background-color: #ff4d88;
+  color: white;
+}
+
+#friendBtn {
+  background-color: #4da6ff;
+  color: white;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
 .buttons {
   display: flex;
   justify-content: center;
