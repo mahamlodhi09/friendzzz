@@ -1,16 +1,16 @@
-
-a.btn {
+.btn {
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
   border: none;
   border-radius: 8px;
   text-decoration: none;
   display: inline-block;
+  margin: 0 10px;
   transition: transform 0.2s;
   color: white;
 }
 
-a.btn:hover {
+.btn:hover {
   transform: scale(1.05);
 }
 
@@ -21,7 +21,6 @@ a.btn:hover {
 .bestie {
   background-color: #4da6ff;
 }
-
 
 body {
   margin: 0;
