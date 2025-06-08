@@ -1,25 +1,34 @@
-.btn {
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.choice-btn {
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
   border: none;
-  border-radius: 8px;
+  border-radius: 30px;
   text-decoration: none;
   display: inline-block;
-  margin: 0 10px;
-  transition: transform 0.2s;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
   color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.btn:hover {
+.choice-btn:hover {
   transform: scale(1.05);
 }
 
-.angry {
-  background-color: #ff4d4d;
+.choice-btn.angry {
+  background-color: #ff4c7e;
 }
 
-.bestie {
-  background-color: #4da6ff;
+.choice-btn.bestie {
+  background-color: #4dbdff;
 }
 
 body {
